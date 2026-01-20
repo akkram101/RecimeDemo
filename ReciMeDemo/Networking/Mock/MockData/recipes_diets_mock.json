@@ -1,0 +1,18 @@
+{
+  "head": {
+    "message": "Success",
+    "statusCode": 200
+  },
+  "body": [
+    { "id": 1, "name": "Vegan" },
+    { "id": 2, "name": "Vegetarian" },
+    { "id": 3, "name": "Gluten-Free" },
+    { "id": 4, "name": "Dairy-Free" },
+    { "id": 5, "name": "Keto" },
+    { "id": 6, "name": "Paleo" },
+    { "id": 7, "name": "Pescetarian" },
+    { "id": 8, "name": "Halal" },
+    { "id": 9, "name": "Kosher" },
+    { "id": 10, "name": "Low-Carb" }
+  ]
+}

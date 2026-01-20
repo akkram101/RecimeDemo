@@ -1,0 +1,28 @@
+{
+  "head": {
+    "message": "Success",
+    "statusCode": 200
+  },
+  "body": [
+    { "ingredientId": 1, "name": "Tomato" },
+    { "ingredientId": 2, "name": "Onion" },
+    { "ingredientId": 3, "name": "Garlic" },
+    { "ingredientId": 4, "name": "Chicken" },
+    { "ingredientId": 5, "name": "Beef" },
+    { "ingredientId": 6, "name": "Pork" },
+    { "ingredientId": 7, "name": "Fish" },
+    { "ingredientId": 8, "name": "Shrimp" },
+    { "ingredientId": 9, "name": "Egg" },
+    { "ingredientId": 10, "name": "Milk" },
+    { "ingredientId": 11, "name": "Cheese" },
+    { "ingredientId": 12, "name": "Butter" },
+    { "ingredientId": 13, "name": "Rice" },
+    { "ingredientId": 14, "name": "Potato" },
+    { "ingredientId": 15, "name": "Carrot" },
+    { "ingredientId": 16, "name": "Bell Pepper" },
+    { "ingredientId": 17, "name": "Broccoli" },
+    { "ingredientId": 18, "name": "Spinach" },
+    { "ingredientId": 19, "name": "Mushroom" },
+    { "ingredientId": 20, "name": "Cabbage" }
+  ]
+}
