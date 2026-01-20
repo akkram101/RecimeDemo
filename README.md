@@ -345,6 +345,19 @@ For a real production app, tightening this up (e.g. actor-based or explicit `@Ma
   - For large datasets (e.g. 1,000+ recipes), a production approach should add:
     - Pagination/infinite scrolling
     - Dictionary-based indexes for frequent lookups (while still using arrays for ordered UI)
+    
+- **Navigation**
+  - Current navigation is minimal: a `NavigationStack` that listens for `RecipeState` and pushes a details page.
+  - This works for demo purposes but lacks robustness:
+    - No deep linking or restoration of navigation state.
+    - No handling of nested flows or modal presentations.
+    - No coordination between multiple feature modules.
+  - A production app should adopt a more structured navigation approach, such as:
+    - Coordinator or Router patterns for explicit flow control.
+    - State‑driven navigation with clear separation of concerns.
+    - Support for deep links, universal links, and programmatic navigation.
+    - Persistence/restoration of navigation state across app launches.
+
 
 - **Limited Error Surface**
   - Errors surface as generic UI messages via `Loadable.failure` and `ErrorMascotView`.
