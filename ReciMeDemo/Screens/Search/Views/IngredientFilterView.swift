@@ -71,7 +71,7 @@ struct IngredientFilterView: View {
             ForEach(ingredients, id: \.ingredientId) { ingredient in
                 ingredientRow(ingredient,
                               color: .green,
-                              onRemove: { viewModel.filter.removeIncludeIngredient($0) })
+                              onRemove: { filter.removeIncludeIngredient($0) })
             }
         }
     }
@@ -85,7 +85,7 @@ struct IngredientFilterView: View {
             ForEach(ingredients, id: \.ingredientId) { ingredient in
                 ingredientRow(ingredient,
                               color: .red,
-                              onRemove: { viewModel.filter.removeExcludeIngredient($0) })
+                              onRemove: { filter.removeExcludeIngredient($0) })
             }
         }
     }
@@ -104,6 +104,9 @@ struct IngredientFilterView: View {
                 onRemove(ingredient)
             } label: {
                 Image(systemName: "xmark.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 20)
                     .foregroundColor(.gray)
             }
         }
@@ -147,7 +150,7 @@ struct IngredientFilterView: View {
     private func searchRows(_ ingredients: [Ingredient]) -> some View {
         VStack(spacing: 6) {
             ForEach(ingredients, id: \.ingredientId) { ingredient in
-                HStack {
+                HStack(spacing: 24) {
                     Text(ingredient.name ?? "")
                         .poppinsRegular(size: 12)
                         .foregroundColor(.black)
@@ -158,14 +161,31 @@ struct IngredientFilterView: View {
                         filter.addExcludeIngredient(ingredient)
                     } label: {
                         Image(systemName: "minus")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 16)
                             .foregroundColor(.red)
+                            .frame(width: 22, height: 22)
+                            .background {
+                                Circle()
+                                    .fill(.red.opacity(0.1))
+                            }
+                        
                     }
                     
                     Button {
                         filter.addIncludeIngredient(ingredient)
                     } label: {
                         Image(systemName: "plus")
-                            .foregroundColor(AppColors.primary)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 16)
+                            .foregroundColor(.green)
+                            .frame(width: 22, height: 22)
+                            .background {
+                                Circle()
+                                    .fill(.green.opacity(0.1))
+                            }
                     }
                 }
                 .padding(.vertical, 6)

@@ -245,7 +245,7 @@ struct SearchRecipeView: View {
             Image(systemName: "xmark")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 8)
+                .frame(width: 12)
                 .foregroundStyle(Color(hex: "#393939"))
                 .onTapGesture {
                     Task {
