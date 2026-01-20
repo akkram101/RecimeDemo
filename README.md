@@ -45,7 +45,7 @@ This demo intentionally goes beyond the baseline requirements with additional UX
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/akkram101/RecimeDemo.git
+   git clone https://github.com/akkram101/RecimeDemo
    cd ReciMeDemo
    ```
 

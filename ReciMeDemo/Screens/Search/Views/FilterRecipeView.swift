@@ -15,7 +15,7 @@ struct FilterRecipeView: View {
     /// Changes are applied back to the main view model only when the user taps "Apply".
     @State private var tempFilter: RecipeFilter = .init()
 
-//    @State private var scrollPhase: ScrollPhase?
+    @State private var scrollPhase: ScrollPhase?
     @State private var scrollPosition: String?
     @State private var activeOption: RecipeFilterOption = .diet
 
@@ -59,11 +59,11 @@ struct FilterRecipeView: View {
                     .scrollDismissesKeyboard(.automatic)
                     .scrollPosition(id: $scrollPosition)
                     .safeAreaPadding(.horizontal, 12)
-//                    .onScrollPhaseChange { _, phase in
-//                        scrollPhase = phase
-//                    }
+                    .onScrollPhaseChange { _, phase in
+                        scrollPhase = phase
+                    }
                     .onChange(of: activeOption) { _, newValue in
-//                        guard scrollPhase != .interacting else { return }
+                        guard scrollPhase != .interacting else { return }
                         scroll(newValue, using: proxy)
                     }
                 }
